@@ -1,5 +1,5 @@
 import 'package:cooper_agro/screen/HomePage.dart';
-import 'package:cooper_agro/screen/ForgotPasswordPage.dart';
+import 'package:cooper_agro/screen/login/forgot-password/ForgotPasswordPage.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -62,8 +62,8 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 Image.asset(
                   'images/logo.png',
-                  width: 200.0,
-                  height: 200.0,
+                  width: 150.0,
+                  height: 150.0,
                 ),
                 TextField(
                   controller: emailController,

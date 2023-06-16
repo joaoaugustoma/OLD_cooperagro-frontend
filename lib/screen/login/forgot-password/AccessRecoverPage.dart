@@ -1,4 +1,4 @@
-import 'package:cooper_agro/screen/LoginPage.dart';
+import 'package:cooper_agro/screen/login/LoginPage.dart';
 import 'package:flutter/material.dart';
 
 class AccessRecoverPage extends StatelessWidget {
@@ -19,7 +19,7 @@ class AccessRecoverPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset('images/logo.png', height: 80.0),
+                Image.asset('images/logo.png', height: 100.0),
                 const SizedBox(height: 16.0),
                 const Text(
                   'Recupere seu acesso',
@@ -49,7 +49,6 @@ class AccessRecoverPage extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    // Voltar para a tela de login com o campo de e-mail preenchido
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(

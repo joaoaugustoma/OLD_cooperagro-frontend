@@ -1,6 +1,8 @@
-import 'package:cooper_agro/screen/AccessRecoverPage.dart';
+import 'package:cooper_agro/screen/login/forgot-password/AccessRecoverPage.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+
+import '../forgot-email/RecoverEmailPage.dart';
 
 class ForgotPasswordPage extends StatefulWidget {
   const ForgotPasswordPage({super.key});
@@ -51,7 +53,7 @@ class _ForgotPasswordState extends State<ForgotPasswordPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset('images/logo.png', height: 80.0),
+                Image.asset('images/logo.png', height: 100.0),
                 const SizedBox(height: 16.0),
                 const Text(
                   'Recupere seu acesso',
@@ -65,6 +67,15 @@ class _ForgotPasswordState extends State<ForgotPasswordPage> {
                   ),
                 ),
                 const SizedBox(height: 16.0),
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => RecoverEmailPage()),
+                    );
+                  },
+                  child: const Text('Esqueci meu e-mail!'),
+                ),
                 ElevatedButton(
                   style: ButtonStyle(
                     fixedSize:

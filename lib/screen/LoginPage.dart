@@ -1,9 +1,12 @@
 import 'package:cooper_agro/screen/HomePage.dart';
+import 'package:cooper_agro/screen/ForgotPasswordPage.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+  final String email;
+
+  const LoginPage({super.key, this.email = ''});
 
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -42,7 +45,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   void initState() {
     super.initState();
-    emailController.clear();
+    emailController.text = widget.email;
     passwordController.clear();
   }
 
@@ -58,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  'images/logo.png', // substitua pelo caminho da sua imagem
+                  'images/logo.png',
                   width: 200.0,
                   height: 200.0,
                 ),
@@ -79,8 +82,10 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 12.0),
                 TextButton(
                   onPressed: () {
-                    // Implemente a lógica para recuperar a senha
-                    print('Esqueceu a senha?');
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ForgotPasswordPage()),
+                    );
                   },
                   child: const Text('Esqueceu a senha?'),
                 ),
